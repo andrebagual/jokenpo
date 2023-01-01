@@ -1,0 +1,104 @@
+import os
+from random import randint
+
+my_score = 0
+computer_score = 0
+
+list1 = ["Rock", "paper", "scisor"]
+while True:
+    print("======================================")
+    print("Welcome to Rock Paper and Scisors Game")
+    print("======================================")
+
+    print("The score is: ")
+    print(f"You: {my_score}")
+    print(f"Computer: {computer_score}")
+
+    print("What do you wish to do? ")
+    x = int(input("0 - Play \ 1 - Exit "))
+    if x == 1:
+        print("Bye")
+        os.system("cls")
+        break
+    else:
+        os.system("cls")
+        print("chose one:")
+        choice = int(input("0 - Rock \ 1 - Paper \ 2 - Scisors: "))
+        y = randint(0, 2)
+        if y == choice:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("Draw!")
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 0 and y == 1:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You lost")
+            computer_score = computer_score + 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 0 and y == 2:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You Won!")
+            my_score += 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 1 and y == 0:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You Won!")
+            my_score += 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 1 and y == 2:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You lost")
+            computer_score += 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 2 and y == 0:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You lost")
+            computer_score += 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+        elif choice == 2 and y == 1:
+            print(f"You Chose {list1[choice]} ")
+            print(f"The computer chose {list1[y]}")
+            print("You Won!")
+            my_score += 1
+            choice2 = int(input("0 - Continue \ 1 - Exit: "))
+            if choice2 == 1:
+                print("Bye")
+                break
+            else:
+                os.system("cls")
+                
